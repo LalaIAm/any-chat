@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap");
+
+:root {
+  --background-color:rgba(237, 240, 246, 1);
+  --blue:rgba(67, 76, 230, 1);
+  --body-1-font-family:"Poppins", Helvetica;
+  --body-1-font-size:16px;
+  --body-1-font-style:normal;
+  --body-1-font-weight:500;
+  --body-1-letter-spacing:0px;
+  --body-1-line-height:normal;
+  --body-2-font-family:"Poppins", Helvetica;
+  --body-2-font-size:18px;
+  --body-2-font-style:normal;
+  --body-2-font-weight:400;
+  --body-2-letter-spacing:0px;
+  --body-2-line-height:normal;
+  --button-font-family:"Poppins", Helvetica;
+  --button-font-size:20px;
+  --button-font-style:normal;
+  --button-font-weight:500;
+  --button-letter-spacing:0px;
+  --button-line-height:normal;
+  --dark-blue-gray:rgba(155, 174, 188, 1);
+  --dark-gray:rgba(33, 33, 33, 1);
+  --dark-gray-60-opacity:rgba(33, 33, 33, 0.6);
+  --dark-gray-87-opacity:rgba(33, 33, 33, 0.87);
+  --gray:rgba(216, 219, 227, 1);
+  --heading-m-font-family:"Poppins", Helvetica;
+  --heading-m-font-size:32px;
+  --heading-m-font-style:normal;
+  --heading-m-font-weight:600;
+  --heading-m-letter-spacing:0px;
+  --heading-m-line-height:44.79999923706055px;
+  --heading-s-font-family:"Poppins", Helvetica;
+  --heading-s-font-size:20px;
+  --heading-s-font-style:normal;
+  --heading-s-font-weight:500;
+  --heading-s-letter-spacing:0px;
+  --heading-s-line-height:normal;
+  --heading-XL-font-family:"Poppins", Helvetica;
+  --heading-XL-font-size:80px;
+  --heading-XL-font-style:normal;
+  --heading-XL-font-weight:800;
+  --heading-XL-letter-spacing:0px;
+  --heading-XL-line-height:112px;
+  --light-blue-gray:rgba(207, 216, 220, 1);
+  --light-gray:rgba(245, 247, 251, 1);
+  --red:rgba(255, 56, 56, 1);
+  --shadow:0px 4px 16px 0px rgba(34, 34, 34, 0.16);
+  --subtitle-1-font-family:"Poppins", Helvetica;
+  --subtitle-1-font-size:16px;
+  --subtitle-1-font-style:normal;
+  --subtitle-1-font-weight:400;
+  --subtitle-1-letter-spacing:0px;
+  --subtitle-1-line-height:22.399999618530273px;
+  --subtitle-2-font-family:"Poppins", Helvetica;
+  --subtitle-2-font-size:14px;
+  --subtitle-2-font-style:normal;
+  --subtitle-2-font-weight:400;
+  --subtitle-2-letter-spacing:0px;
+  --subtitle-2-line-height:normal;
+  --white:rgba(255, 255, 255, 1);
+}
+
+@import 'components/button';
+
+@import 'components/onboarding';

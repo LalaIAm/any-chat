@@ -1,0 +1,35 @@
+.button {
+    all: unset;
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    gap: 0.625rem;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    position: relative;
+    transition: all .2s ease;
+    cursor: pointer;
+
+    .text-wrapper {
+        color: var(--white);
+        font-family: var(--button-font-family);
+        font-size: calc(var(--button-font-size) / 16rem);
+        font-style: var(---button-font-style);
+        font-weight: var(--button-font-weight);
+        letter-spacing: var(--button-letter-spacing);
+        line-height: var(--button-line-height);
+        margin-top: -0.0625rem;
+        width: fit-content;
+    }
+
+    &.locked-true {
+        width: 15.025rem;
+    }
+
+    &:hover {
+    background-color: #2830bb;
+
+  }
+}
