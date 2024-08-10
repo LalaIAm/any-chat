@@ -6,9 +6,6 @@ jobs:
   install:
     runs-on: ubuntu-22.04
     steps:
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.3
-
       
       - name: Yarn Setup 
         uses: DerYeger/yarn-setup-action@v1.0.1
