@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.416" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-08-10T20:28:14" tests="0" file="cypress\e2e\onboarding.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="the onboarding page" timestamp="2024-08-10T20:28:14" tests="3" time="2.413" failures="0">
+    <testcase name="displays a logo, title, and a &quot;get started&quot; button" time="0.682" classname="the onboarding page displays a logo, title, and a &quot;get started&quot; button">
+    </testcase>
+    <testcase name="has a split-view design with two columns" time="0.091" classname="the onboarding page has a split-view design with two columns">
+    </testcase>
+    <testcase name="displays the image of a hand holding a phone" time="0.072" classname="the onboarding page displays the image of a hand holding a phone">
+    </testcase>
+  </testsuite>
+</testsuites>

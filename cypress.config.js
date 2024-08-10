@@ -6,6 +6,12 @@ dotenv.config()
 export default defineConfig({
   viewportHeight: 1024,
   viewportWidth: 1440,
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'results/test-results.xml',
+    outputs: true, 
+    testCaseSwitchClassnameAndName: true
+  },
   e2e: {
     setupNodeEvents(on, config) {
       on('file:preprocessor', vitePreprocessor())
