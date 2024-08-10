@@ -35,7 +35,16 @@ jobs:
     needs: install 
     steps:
       - name: Checkout 
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4  
+
+      - run: yarn install --no-save @testmo/testmo-cli
+
+      - run: |
+          npx testmo automation:resources:add-field --name git --type string \
+            --value ${GITHUB_SHA:0:7} --resources resources.json
+          RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          npx testmo automation:resources:add-link --name build \
+            --url $RUN_URL --resources resources.json
 
       - name: Download build folder 
         uses: actions/download-artifact@v4
@@ -43,8 +52,30 @@ jobs:
           name: dist 
           path: dist 
 
-      - name: Cypress run 
-        uses: cypress-io/github-action@v6 
-        with:
-          start: yarn cy:test
-          browser: chrome
+      - run: |
+          if [[ -z "${TESTMO_URL}" ]]; then
+            echo "The TESTMO_URL secret is not defined for this repository"
+            exit 1
+          fi
+
+          if [[ -z "${TESTMO_TOKEN}" ]]; then
+            echo "The TESTMO_TOKEN secret is not defined for this repository"
+            exit 1
+          fi
+        env:
+          TESTMO_URL: ${{ secrets.TESTMO_URL }}
+          TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
+
+      - run: |
+          npx testmo automation:run:submit \
+            --instance "$TESTMO_URL" \
+            --project-id 1 \
+            --name "Mocha test run" \
+            --source "unit-tests" \
+            --resources resources.json \
+            --results results/*.xml \
+            -- yarn cy:test
+        env:
+          TESTMO_URL: ${{ secrets.TESTMO_URL }}
+          TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
+
