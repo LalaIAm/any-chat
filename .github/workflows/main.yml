@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4 
 
       - name: Cypress install
-        uses: cypress-io/github-actions@v6
+        uses: cypress-io/github-action@v6
         with:
           runTests: false 
           build: yarn build
@@ -44,7 +44,7 @@ jobs:
           path: dist 
 
       - name: Cypress run 
-        uses: cypress-io/github-actions@v6 
+        uses: cypress-io/github-action@v6 
         with:
           start: yarn cy:test
           browser: chrome
