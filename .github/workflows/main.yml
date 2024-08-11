@@ -39,7 +39,7 @@ jobs:
       - run: yarn install --no-save @testmo/testmo-cli
 
       - run: |
-          npx testmo automation:resources:add-field --name git --type string \
+          dlx testmo automation:resources:add-field --name git --type string \
             --value ${GITHUB_SHA:0:7} --resources resources.json
           RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           npx testmo automation:resources:add-link --name build \
@@ -66,7 +66,7 @@ jobs:
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
 
       - run: |
-          npx testmo automation:run:submit \
+          dlx testmo automation:run:submit \
             --instance "$TESTMO_URL" \
             --project-id 1 \
             --name "Mocha test run" \
