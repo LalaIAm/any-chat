@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       
-      - name: Yarn Setup 
-        uses: DerYeger/yarn-setup-action@v1.0.1
+    
           
           
       - name: Checkout
