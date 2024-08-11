@@ -77,7 +77,7 @@ jobs:
             --source "unit-tests" \
             --resources resources.json \
             --results results/*.xml \
-            -- yarn cy:test
+            -- npm run cy:test
         env:
           TESTMO_URL: ${{ secrets.TESTMO_URL }}
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
