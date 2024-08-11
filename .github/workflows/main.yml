@@ -10,17 +10,21 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       
-    
-          
           
       - name: Checkout
         uses: actions/checkout@v4 
+
+      - name: Setup Node 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.15.0
+          cache: npm
 
       - name: Cypress install
         uses: cypress-io/github-action@v6
         with:
           runTests: false 
-          build: yarn build
+          build: npm run build
 
       - name: Save build folder 
         uses: actions/upload-artifact@v4 
@@ -36,10 +40,10 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v4  
 
-      - run: yarn install --no-save @testmo/testmo-cli
+      - run: npm install --no-save @testmo/testmo-cli
 
       - run: |
-          dlx testmo automation:resources:add-field --name git --type string \
+          npx testmo automation:resources:add-field --name git --type string \
             --value ${GITHUB_SHA:0:7} --resources resources.json
           RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           npx testmo automation:resources:add-link --name build \
@@ -66,7 +70,7 @@ jobs:
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
 
       - run: |
-          dlx testmo automation:run:submit \
+          npx testmo automation:run:submit \
             --instance "$TESTMO_URL" \
             --project-id 1 \
             --name "Mocha test run" \
