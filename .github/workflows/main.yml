@@ -73,8 +73,8 @@ jobs:
           npx testmo automation:run:submit \
             --instance "$TESTMO_URL" \
             --project-id 1 \
-            --name "Mocha test run" \
-            --source "unit-tests" \
+            --name "Cypress Tests" \
+            --source "cypress" \
             --resources resources.json \
             --results results/*.xml \
             -- npm run cy:test
