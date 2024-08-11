@@ -1,7 +1,9 @@
 import Button from "../components/Button";
 import img from "../assets/images/hand-holding-a-phone.png";
+import { useNavigate } from "react-router-dom";
 
 const Onboarding = () => {
+  const navigate = useNavigate()
   return (
     <div className="home-page">
       <div className="overlap-group-wrapper">
@@ -18,7 +20,9 @@ const Onboarding = () => {
           <div data-test="title" className="text-wrapper-2">
             Chat anywhere with anyone
           </div>
-          <Button data-test="btn" className="button-instance">
+          <Button data-test="btn" className="button-instance"
+          onClick={() => navigate('/join')}
+          >
             Get Started
           </Button>
         </div>

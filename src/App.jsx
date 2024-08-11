@@ -9,6 +9,8 @@ import './assets/scss/syles.scss'
 
 
 import Onboarding from "./pages/Onboarding";
+import JoinChat from "./pages/JoinChat";
+import MainChat from "./pages/MainChat";
 
 function App() {
   const action = useNavigationType();
@@ -26,9 +28,11 @@ function App() {
     let metaDescription = "";
     switch (pathname) {
       case "/":
-        title = "";
+        title = "Any Chat";
         metaDescription = "";
         break;
+      case '/join':
+        title = "Join Chat"
       default:
         title = "";
         metaDescription = "";
@@ -50,7 +54,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Onboarding />} />
-    </Routes>
+      <Route path='/join' element={<JoinChat />} />
+      <Route path='/chat' element={<MainChat />} />
+    </Routes> 
   );
 }
 

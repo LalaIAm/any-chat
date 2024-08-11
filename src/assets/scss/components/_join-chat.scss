@@ -1,0 +1,71 @@
+.join-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background: var(--background-color);
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding: 38px 64px;
+
+        img {
+            width: 152px;
+            height: 36px;
+        }
+    }
+
+    .join-modal {
+        background: white;
+        box-shadow: var(--box-shadow);
+        padding: 40px;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            color: var(--dark-gray);
+            font-family: var(--heading-m-font-family);
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1.5rem;
+
+        }
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 64px;
+
+            label {
+                margin-bottom: 6px;
+                color: var(--dark-gray);
+                font-size: var(--body-1-font-size);
+                font-family: var(--body-1-font-family);
+                left: 0;
+                
+                top: 0;
+            }
+
+            div {
+                height: 18px;
+                padding: 4px;
+            }
+        }
+    }
+
+    .input-error {
+        color: var(--red); 
+        font-family: var(--subtitle-1-font-family); 
+        font-size: var(--subtitle-1-font-size);  
+
+    }
+}

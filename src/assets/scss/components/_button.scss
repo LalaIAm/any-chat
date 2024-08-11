@@ -32,4 +32,10 @@
     background-color: #2830bb;
 
   }
+
+  &:disabled {
+    box-shadow: none; 
+    background-color: #9baebc;
+    cursor: not-allowed;
+  }
 }
