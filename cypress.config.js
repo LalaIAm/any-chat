@@ -6,11 +6,9 @@ dotenv.config()
 export default defineConfig({
   viewportHeight: 1024,
   viewportWidth: 1440,
-  reporter: 'junit',
+  reporter: 'mocha-multi-reporters',
   reporterOptions: {
-    mochaFile: 'results/test-results.xml',
-    outputs: true, 
-    testCaseSwitchClassnameAndName: true
+  configFile: 'reporter-config.json'
   },
   e2e: {
     setupNodeEvents(on, config) {
