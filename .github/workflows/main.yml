@@ -82,23 +82,5 @@ jobs:
           TESTMO_URL: ${{ secrets.TESTMO_URL }}
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
 
-  deploy:
-    runs-on: ubuntu-22.04
-    needs: cypress-run
-    steps:
-      - name: Checkout 
-        uses: actions/checkout@v4  
 
-      - name: Download build folder 
-        uses: actions/download-artifact@v4
-        with:
-          name: dist 
-          path: dist 
-
-      - name: Netlify Deploy
-        uses: jsmrcaga/action-netlify-deploy@v2.2.0
-        with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          build_directory: dist
     
