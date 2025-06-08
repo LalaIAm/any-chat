@@ -1,0 +1,22 @@
+.layer-1-icon1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9rem;
+    height: 2.25rem;
+    overflow: hidden;
+}
+
+.layer-1-parent {
+    height: 2.25rem;
+    width: 9.5rem;
+    position: relative;
+}
+
+.logo {
+    width: 9.563rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}

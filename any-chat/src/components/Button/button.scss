@@ -1,0 +1,20 @@
+button, .btn, .small-btn {
+    cursor: pointer;
+    background-color: var(--Blue);
+    color: var(--White);
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: inline-flex;
+    gap: 10px;
+    height: 71px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    position: relative;
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+}
