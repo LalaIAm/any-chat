@@ -22,7 +22,7 @@ jobs:
         with:
           name: dist 
           if-no-files-found: error 
-          path: dist 
+          path: ./any-chat/dist 
 
   cypress-run:
     runs-on: ubuntu-24.04 
@@ -35,7 +35,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
-          path: dist 
+          path: ./any-chat/dist 
 
       - name: Cypress run 
         uses: cypress-io/github-action@v6 
